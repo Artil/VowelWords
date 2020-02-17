@@ -112,7 +112,7 @@ namespace VowelWords
             if (typeOfCheck)             
                 existVowelWordsCount = fileContent.ToLower().Split() // real vowel words;
                     .Select(x => x.Trim(punctuation))  // get all words and 
-                    .Intersect(allVowelWords).Count(); // intersect 2 collection
+                    .Where(y => allVowelWords.Any(z => String.Equals(z, y))).Count(); // intersect 2 collection
             else
                 existVowelWordsCount = fileContent.ToLower().Split() // random vowel letters
                     .Where(x => Regex.IsMatch(x, vowelRegExp)).Count(); // check with regex
