@@ -30,8 +30,8 @@ namespace VowelWords
                 // clear console
                 Console.Clear();
 
-                // check is correct file path
-                filePathChecker();
+                // get and check is correct file path
+                GetPath();
 
                 // read file text
                 using (var reader = File.OpenText(path))
@@ -69,7 +69,7 @@ namespace VowelWords
             }
         }
 
-        static void filePathChecker()
+        static void GetPath()
         {
             bool isCorrectPath = false;
 
