@@ -15,7 +15,6 @@ namespace VowelWords
         const string fileNameRegExp = @"^(?!-)[a-z0-9-]+(?<!-)(/(?!-)[a-z0-9-]+(?<!-))*$";
         static string path;
         static string fileContent;
-        static bool isExit;
         static int existVowelWordsCount;
 
         // get words https://word.tips/vowel-words/
@@ -45,7 +44,7 @@ namespace VowelWords
                 Console.WriteLine($"Count of vowel word is - {existVowelWordsCount}");
 
                 // rerun
-                YesOrNo("Try again?", out isExit); // string to bool
+                YesOrNo("Try again?", out bool isExit); // string to bool
             } while (isExit);
         }
 
