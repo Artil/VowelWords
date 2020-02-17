@@ -24,6 +24,7 @@ namespace VowelWords
 
         static void Main(string[] args)
         {
+            bool isExit;
             do
             {
                 // clear console
@@ -44,7 +45,7 @@ namespace VowelWords
                 Console.WriteLine($"Count of vowel word is - {existVowelWordsCount}");
 
                 // rerun
-                YesOrNo("Try again?", out bool isExit); // string to bool
+                YesOrNo("Try again?", out isExit); // string to bool
             } while (isExit);
         }
 
