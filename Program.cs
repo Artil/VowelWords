@@ -100,9 +100,7 @@ namespace VowelWords
 
         static void TypeOfWordsCheck()
         {
-            bool typeOfCheck;
-
-            YesOrNo("Do you want check real words?", out typeOfCheck); // string to bool
+            YesOrNo("Do you want check real words?", out bool typeOfCheck); // string to bool
 
             // get punctuation
             var punctuation = fileContent.Where(Char.IsPunctuation).Distinct().ToArray();
